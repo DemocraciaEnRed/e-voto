@@ -118,7 +118,7 @@ def dashboard(request):
         'voted_voters_count': voted_voters.count(),
         'positions': positions,
         'chart_data': chart_data,
-        'page_title': "Dashboard"
+        'page_title': "Tablero"
     }
     return render(request, "admin/home.html", context)
 
@@ -131,7 +131,7 @@ def voters(request):
         'form1': userForm,
         'form2': voterForm,
         'voters': voters,
-        'page_title': 'Voters List'
+        'page_title': 'Votantes'
     }
     if request.method == 'POST':
         if userForm.is_valid() and voterForm.is_valid():
@@ -140,7 +140,7 @@ def voters(request):
             voter.admin = user
             user.save()
             voter.save()
-            messages.success(request, "New voter created")
+            messages.success(request, "Nuevo voter created")
         else:
             messages.error(request, "Form validation failed")
     return render(request, "admin/voters.html", context)
@@ -213,14 +213,14 @@ def viewPositions(request):
     context = {
         'positions': positions,
         'form1': form,
-        'page_title': "Positions"
+        'page_title': "Puestos"
     }
     if request.method == 'POST':
         if form.is_valid():
             form = form.save(commit=False)
             form.priority = positions.count() + 1  # Just in case it is empty.
             form.save()
-            messages.success(request, "New Position Created")
+            messages.success(request, "Nuevo Position Created")
         else:
             messages.error(request, "Form errors")
     return render(request, "admin/positions.html", context)
@@ -259,12 +259,12 @@ def viewCandidates(request):
     context = {
         'candidates': candidates,
         'form1': form,
-        'page_title': 'Candidates'
+        'page_title': 'Candidaturas'
     }
     if request.method == 'POST':
         if form.is_valid():
             form = form.save()
-            messages.success(request, "New Candidate Created")
+            messages.success(request, "Nuevo Candidate Created")
         else:
             messages.error(request, "Form errors")
     return render(request, "admin/candidates.html", context)
@@ -319,7 +319,7 @@ def view_candidate_by_id(request):
 
 def ballot_position(request):
     context = {
-        'page_title': "Ballot Position"
+        'page_title': "Posición de boleta"
     }
     return render(request, "admin/ballot_position.html", context)
 
@@ -365,7 +365,7 @@ def ballot_title(request):
     from django.urls import resolve
     try:
         redirect_url = resolve(url)
-        title = request.POST.get('title', 'No Name')
+        title = request.POST.get('title', 'No Nombre')
         file = open(settings.ELECTION_TITLE_PATH, 'w')
         file.write(title)
         file.close()
@@ -381,7 +381,7 @@ def viewVotes(request):
     votes = Votes.objects.all()
     context = {
         'votes': votes,
-        'page_title': 'Votes'
+        'page_title': 'Votos'
     }
     return render(request, "admin/votes.html", context)
 

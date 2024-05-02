@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+ 
+  app:
+    build: .
+    image: ghcr.io/democraciaenred/e-voto:latest
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - ddbb
+    links:
+      - ddbb:mysql      
+    env_file:
+      - .env
+    command: python manage.py runserver 0.0.0.0:8000

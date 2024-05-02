@@ -18,8 +18,8 @@
   </tr>
   <tr>
   <th class="text-center" style="width: 5%;">SN</th>
-  <th class="text-center" style="width: 60%;">Candidate Name </th>
-  <th class="text-center" style="width: 35%;">Total Votes Recorded</th>
+  <th class="text-center" style="width: 60%;">Candidatura Nombre </th>
+  <th class="text-center" style="width: 35%;">Total Votos Recorded</th>
 </tr>
 {% for data  in value.candidate_data %} {# Loop 2 #}
   <tr>
@@ -29,15 +29,15 @@
   </tr>
   {% empty %}
   <tr>
-    <td colspan="3">No Candidates Vying For This Position</td>
+    <td colspan="3">No Candidaturas Vying For This Posición</td>
   </tr>
-{% endfor %} {# Please Close Loop 2  #}
+{% endfor %} {# Please Cerrar Loop 2  #}
 
 <tr>
   <th class="text-center" colspan="3"> {{ value.winner|safe }} </th>
   </tr>
   </table>
-{% endfor %} {# Please Close Loop 1  #}
+{% endfor %} {# Please Cerrar Loop 1  #}
 
 </tbody>
   </table>

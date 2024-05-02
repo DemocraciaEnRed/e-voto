@@ -10,12 +10,12 @@
           <div class="small-box bg-aqua">
             <div class="inner">
               <h3>{{ position_count }}</h3>
-              <p>No. of Positions</p>
+              <p>Puestos</p>
             </div>
             <div class="icon">
               <i class="fa fa-tasks"></i>
             </div>
-            <a href="{% url 'viewPositions' %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{% url 'viewPositions' %}" class="small-box-footer">Más info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -24,12 +24,12 @@
           <div class="small-box bg-green">
             <div class="inner">
               <h3>{{ candidate_count }}</h3>          
-              <p>No. of Candidates</p>
+              <p>Candidaturas</p>
             </div>
             <div class="icon">
               <i class="fa fa-black-tie"></i>
             </div>
-            <a href="{% url 'viewCandidates' %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{% url 'viewCandidates' %}" class="small-box-footer">Más info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -38,12 +38,12 @@
           <div class="small-box bg-yellow">
             <div class="inner">
               <h3>{{ voters_count }}</h3>             
-              <p>Total Voters</p>
+              <p>Total Votantes</p>
             </div>
             <div class="icon">
               <i class="fa fa-users"></i>
             </div>
-            <a href="{% url 'adminViewVoters' %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{% url 'adminViewVoters' %}" class="small-box-footer">Más info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -52,12 +52,12 @@
           <div class="small-box bg-red">
             <div class="inner">
               <h3>{{ voted_voters_count }}</h3>
-              <p>Voters Voted</p>
+              <p>Votos</p>
             </div>
             <div class="icon">
               <i class="fa fa-edit"></i>
             </div>
-            <a href="{% url 'viewVotes' %}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="{% url 'viewVotes' %}" class="small-box-footer">Más info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -65,9 +65,9 @@
 
       <div class="row">
         <div class="col-xs-12">
-          <h3>Votes Tally
+          <h3>Conteo de votos
             <span class="pull-right">
-              <a href="{% url 'printResult' %}" class="btn btn-success btn-sm btn-flat"><span class="glyphicon glyphicon-print"></span> Print</a>
+              <a href="{% url 'printResult' %}" class="btn btn-success btn-sm btn-flat"><span class="glyphicon glyphicon-print"></span> Imprimir</a>
             </span>
           </h3>
         </div>
@@ -101,7 +101,7 @@
       
       {% endblock content %}
 
-      <!-- New Block -->
+      <!-- Nuevo Block -->
       {% block custom_js %}
       <script src="{% static 'bower_components/chart.js/Chart.js' %}"></script>
 <!-- ChartJS Horizontal Bar -->
@@ -117,7 +117,7 @@
     var barChartData = {
       labels: {{ value.candidates|safe }},
       datasets: [{
-        label: 'Votes',
+        label: 'Votos',
         fillColor: 'rgba(60,141,188,0.9)',  
         strokeColor: 'rgba(60,141,188,0.8)',
         pointColor: '#3b8bba',
