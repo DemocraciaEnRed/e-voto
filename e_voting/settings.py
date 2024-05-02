@@ -88,8 +88,8 @@ DATABASES = {
         "HOST": os.environ.get('DDBB_HOST', 'localhost'),
         "PORT": os.environ.get('DDBB_PORT', '3306'),
         "NAME": os.environ.get('DDBB_NAME', 'e_voto'),
-        "USER": os.environ.get('DDBB_USER', 'e_voto'),
-        "PASSWORD": os.environ.get('DDBB_PASSWORD', 'e_voto')
+        "USER": os.environ.get('DDBB_USER', 'root'),
+        "PASSWORD": os.environ.get('DDBB_PASSWORD', '')
     }
 }
 
