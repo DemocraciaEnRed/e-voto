@@ -85,11 +85,11 @@ DATABASES = {
     #   You can use this :
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "HOST": os.environ.get('DB_HOST', 'localhost'),
-        "PORT": os.environ.get('DB_PORT', '3306'),
-        "NAME": os.environ.get('DB_DATABASE', 'e_voto'),
-        "USER": os.environ.get('DB_USER', ''),
-        "PASSWORD": os.environ.get('DB_PASSWORD', '')
+        "HOST": os.environ.get('DDBB_HOST', 'localhost'),
+        "PORT": os.environ.get('DDBB_PORT', '3306'),
+        "NAME": os.environ.get('DDBB_NAME', 'e_voto'),
+        "USER": os.environ.get('DDBB_USER', 'e_voto'),
+        "PASSWORD": os.environ.get('DDBB_PASSWORD', 'e_voto')
     }
 }
 

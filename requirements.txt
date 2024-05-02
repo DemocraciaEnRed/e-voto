@@ -4,3 +4,4 @@ virtualenv==20.0.31
 Pillow==7.2.0
 django-renderpdf==3.0.1
 requests==2.24.0
+mysqlclient==2.2.4

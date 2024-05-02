@@ -116,3 +116,4 @@ media/
 # account/migrations/*
 # static/
 # README.md
+tmp/
