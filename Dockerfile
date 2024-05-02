@@ -11,4 +11,4 @@ RUN chmod +x /app
 
 WORKDIR /app
 EXPOSE 8000
-CMD [ "gunicorn", "config.wsgi", "--bind", "0.0.0.0:8000", "--chdir=/app", "--timeout", "1800" ]
+CMD [ "gunicorn", "e_voting.wsgi", "--bind", "0.0.0.0:8000", "--chdir=/app", "--timeout", "1800" ]
