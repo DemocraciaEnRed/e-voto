@@ -15,7 +15,7 @@ services:
  
   app:
     build: .
-    image: ghcr.io/democraciaenred/e-voto:latest
+    image: ghcr.io/democraciaenred/voto-digital:latest
     volumes:
       - .:/app
     ports:

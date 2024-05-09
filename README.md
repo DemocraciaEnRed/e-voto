@@ -1,4 +1,4 @@
-# E-Voto
+# Voto Digital
 
 ![Header](static/images/der_isologo.png)
 
